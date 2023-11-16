@@ -75,10 +75,7 @@ def save_pockets(cfg, rec_files, ligs, lig_dist_cutoff):
         
     all_lig_coords = np.array(all_lig_coords)
     
-    for rec_file in rec_files:
-        file_pre = rec_file.split(".")[0]
-        outfile = os.path.join(get_output_dir(cfg), f"{file_pre}_pocket.pdb")
-        full_rec_file = os.path.join(get_output_dir(cfg), rec_file)
+    full_rec_file = 'probis download here'
         with warnings.catch_warnings():
             warnings.filterwarnings("ignore", category=PDBConstructionWarning)
             structure = biopython_parser.get_structure('random_id', full_rec_file)
